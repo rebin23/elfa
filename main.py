@@ -20,6 +20,7 @@ for x in range(2000):
 			assert response.text==prox
 			print(response.text)
 			send_telegram = 'https://api.telegram.org/bot' + token_bot + '/sendMessage?chat_id=' + id_tg + '&parse_mode=Markdown&text=' + x
+			req_sender = requests.get(send_telegram)
 		except:
 			print("Proxy does not work")
 
